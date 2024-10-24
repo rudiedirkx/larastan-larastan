@@ -310,6 +310,11 @@ services:
             - phpstan.broker.dynamicStaticMethodReturnTypeExtension
 
     -
+        class: Larastan\Larastan\Methods\CollectionChunkClosureTypeExtension
+        tags:
+            - phpstan.methodParameterClosureTypeExtension
+
+    -
         class: Larastan\Larastan\Types\AbortIfFunctionTypeSpecifyingExtension
         tags:
             - phpstan.typeSpecifier.functionTypeSpecifyingExtension
