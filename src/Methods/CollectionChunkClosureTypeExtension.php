@@ -26,7 +26,7 @@ final class CollectionChunkClosureTypeExtension implements MethodParameterClosur
 
     public function isMethodSupported(MethodReflection $methodReflection, ParameterReflection $parameter): bool
     {
-        if ($methodReflection->getName() != 'chunk') {
+        if (!in_array($methodReflection->getName(), ['chunk', 'chunkById', 'chunkByIdDesc'])) {
             return false;
         }
 
